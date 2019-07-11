@@ -5,5 +5,12 @@
   <script src="https://www.puck-js.com/puck.js"></script>
   <button onclick="Puck.write('LED1.set();\n');">On!</button>
   <button onclick="Puck.write('LED1.reset();\n');">Off!</button>
+  <input type='text' id='test' />
+<script type='text/javascript'>
+var el = document.getElementById('test');
+el.onchange = ({target}) => {
+  console.info(target.value)
+}
+  </script>
  </body>
 </html>
