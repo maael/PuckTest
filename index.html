@@ -6,11 +6,12 @@
   <button onclick="Puck.write('LED1.set();\n');">On!</button>
   <button onclick="Puck.write('LED1.reset();\n');">Off!</button>
   <input type='text' id='test' />
-<script type='text/javascript'>
-var el = document.getElementById('test');
-el.onchange = ({target}) => {
-  console.info(target.value)
-}
+  <script type='text/javascript'>
+   var el = document.getElementById('test');
+   el.onkeydown = ({target}) => {
+     console.info('keydown', target.value);
+     Puck.write('LED1.reset();\n');
+   }
   </script>
  </body>
 </html>
